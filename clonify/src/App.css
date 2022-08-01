@@ -1,0 +1,32 @@
+
+/* NAV BAR STYLING */
+.navbar{
+    border: 1px solid red;
+    height: 95%;
+    width: 10%;
+    position: absolute;
+    display: flex;
+}
+
+/* HEADER STYLING */
+.header{
+    color: white;
+    background-color: #1E1E1E;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin-left: 200px;
+    border: 1px solid green;
+    width: 88%;
+}
+
+
+/* CARD CONTAINER STYLING */
+.cardContainer{
+    border: 1px solid pink;
+    position: absolute;
+    margin-left: 200px;
+    margin-top: 85px;
+    width: 88%;
+    height: 86.37%; /* Come back and use calc function to make more precise */
+}
