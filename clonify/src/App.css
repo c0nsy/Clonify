@@ -1,32 +1,174 @@
-
+/* GLOBAL  */
+*{
+    background-color: #121212;
+}
 /* NAV BAR STYLING */
 .navbar{
-    border: 1px solid red;
+    color: white;
+    background-color: #121212;
     height: 95%;
     width: 10%;
     position: absolute;
-    display: flex;
+
+}
+.links{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    width: 150px;
+    z-index: 999;
+    height: 200px;
+}
+.navbar--icons{
+    width: 30px;
+    height: 30px;
+    margin-top: 15px;
+    gap: 0px;
+}
+.icon--text{
+    padding-right: 25px;
+    padding-top: 1px;
 }
 
+.navbar-divider{
+    position: absolute;
+    width: 90%;
+    height: 0px;
+    left: 7px;
+    top: 231.5px;
+    border: 0.5px solid #1E1E1E;
+    border-radius: 10px;
+}
 /* HEADER STYLING */
 .header{
     color: white;
-    background-color: #1E1E1E;
+    background-color: #121212;
     position: absolute;
     display: flex;
     justify-content: center;
     margin-left: 200px;
-    border: 1px solid green;
     width: 88%;
+}
+.header--icon{
+    margin-top: 15px;
+    max-width: 50px;
+    max-height: 50px;
+    padding-right: 25px;
 }
 
 
 /* CARD CONTAINER STYLING */
 .cardContainer{
-    border: 1px solid pink;
+    color: white;
+    background-color: #1E1E1E;
     position: absolute;
     margin-left: 200px;
     margin-top: 85px;
     width: 88%;
     height: 86.37%; /* Come back and use calc function to make more precise */
+}
+/* MAIN CARDS */
+.maincards{
+    color:white;
+    position: absolute;
+    margin-left: 205px;
+    margin-top: 90px;
+    width: 87.5%;
+    height: 20%;
+    
+}
+.mainCardObject > ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 25px;
+    gap: 160px;
+    list-style: none;
+
+}
+.mainCardImage{
+    max-width: 250px;
+    max-height: 100%;
+}
+
+/* SIDE CARDS */
+.sidecards{
+    color: white;
+    position: absolute;
+    margin-left: 205px;
+    margin-top: 350px;
+    width: 87.5%;
+    height: 58%;
+}
+
+.sideCardObjects > ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 100px;
+    list-style: none;
+}
+
+/* MAIN CARD BUTTONS */
+.cardObj{
+    display: flex;
+    width: 250px;
+}
+.playbutton{
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 5px;
+    display: none;
+    height: 50px;
+    width: 50px;
+    background-color: rgba(255, 255, 255, 0);
+}
+.addbutton{
+    position: absolute;
+    margin-top: 105px;
+    margin-left: 200px;
+    display: none;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+/* DISPLAYS BUTTON ON HOVER */
+.cardObj:hover > .playbutton, .cardObj:hover > .addbutton{
+    display: inline-block;
+    color: yellow;
+}
+.playbutton:hover, .addbutton:hover{
+    transform: scale(1.2);
+}
+/* SIDE CARD BUTTONS */
+.sideCardObj{
+    display: flex;
+    width: 120px;
+    height: 125px;
+}
+.smallplaybutton{
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    margin-top: 86px;
+    display: none;
+    height: 40px;
+    width: 40px;
+}
+.smalladdbutton{
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    margin-top: 86px;
+    margin-left: 78px;
+    display: none;
+    height: 35px;
+    width: 35px;
+}
+
+/* SIDE CARD DISPLAY ON HOVER */
+.sideCardObj:hover > .smallplaybutton, .sideCardObj:hover > .smalladdbutton{
+    display: inline-block;
+    color: yellow;
+}
+
+.smallplaybutton:hover, .smalladdbutton:hover{
+    transform: scale(1.2);
 }

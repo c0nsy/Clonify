@@ -1,9 +1,9 @@
 import React from "react"
-import { CloneifyLogo } from '../assets/CloneifyLogo.png'
+import CloneifyIcon from "../assets/CloneifyLogo.png"
 function Header(){
     return (
         <div className="header">
-            <img src={CloneifyLogo} />
+            <img src={CloneifyIcon} className="header--icon"/>
             <h1>Cloneify</h1>
         </div>
     )

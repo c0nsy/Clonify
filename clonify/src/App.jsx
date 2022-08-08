@@ -3,8 +3,8 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Header from './components/Header'
 import CardContainer from './components/CardContainer'
-// import MainCard from './components/MainCard'
-// import SideCard from './components/SideCard'
+import MainCard from './components/MainCard'
+import SideCard from './components/SideCard'
 
 function App() {
 
@@ -14,12 +14,12 @@ function App() {
         <Navbar />
         <Header />
         <CardContainer />
-        {/* <div className="maincards">
+        <div className="maincards">
           <MainCard />
         </div>
         <div className="sidecards">
           <SideCard />
-        </div> */}
+        </div>
       </div>
     </div>
   )
