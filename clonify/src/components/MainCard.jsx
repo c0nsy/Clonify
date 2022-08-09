@@ -1,10 +1,4 @@
 import React from "react"
-import HipHopCard from "../assets/hiphopMainCard.png"
-import HouseCard from "../assets/houseMainCard.png"
-import PopCard from "../assets/popMainCard.png"
-import PlayButton from "../assets/playbutton.png"
-import AddButton from "../assets/AddImage.png"
-
 /* 
     TO DO
     -create data json
@@ -25,38 +19,18 @@ import AddButton from "../assets/AddImage.png"
 */
 
 
-function MainCard(){
+function MainCard(props){
     return(
-        <div>
-            <div className="mainCardObject">
-                <ul>
-                    <li>
-                        <div className="cardObj">
-                            <img src={HipHopCard} className ="mainCardImage" />
-                            <img src={PlayButton} className="playbutton"/>
-                            <img src={AddButton} className="addbutton"/>
-                        </div>
-                        
-                    </li>
-
-                    <li>
-                        <div className="cardObj">
-                            <img src={HouseCard} className = "mainCardImage" />
-                            <img src={PlayButton} className="playbutton"/>
-                            <img src={AddButton} className="addbutton"/>
-                        </div>
-                        
-                    </li>
-
-                    <li>
-                        <div className="cardObj">
-                            <img src={PopCard} className = "mainCardImage"/>
-                            <img src={PlayButton} className="playbutton"/>
-                            <img src={AddButton} className="addbutton"/>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+        <div className="mainCardObject">
+            <ul>
+                <li>
+                    <div className="cardObj">
+                        <img src={props.image} className ="mainCardImage"/>
+                        <img src={props.playbutton} className="playbutton"/>
+                        <img src={props.addbutton} className="addbutton" />
+                    </div>
+                </li>
+            </ul> 
         </div>
     )
 }
