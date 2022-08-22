@@ -3,9 +3,10 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Header from './components/Header'
 import CardContainer from './components/CardContainer'
-import SideCard from './components/SideCard'
-
-import MainCard from './components/MainCard'
+import MainCardContainer from './components/MainCardContainer'
+// import SideCardContainer from './components/SideCardContainer'
+// import SideCard from './components/SideCard'
+// import MainCard from './components/MainCard'
 import Playlist from './components/Playlist'
 
 
@@ -19,7 +20,23 @@ function App() {
   //playlist state
   const [playlistItem, setPlaylistItem] = useState([])
 
-  // const mainCards = Data.map(card => {
+ 
+  return (
+    <div className="App">
+      <Navbar />
+      <Header />
+      <CardContainer />
+      <MainCardContainer playlistState={setPlaylistItem} />
+      {/* <SideCardContainer playlistState={setPlaylistItem} /> */}
+      <Playlist playlistItem={playlistItem} />
+
+    </div>
+  )
+}
+
+export default App
+
+ // const mainCards = Data.map(card => {
   //   return(
   //     <MainCard 
   //         key={card.id}
@@ -44,16 +61,7 @@ function App() {
   //     />
   //   )
   // })
-  
-  return (
-    <div className="App">
-      <Navbar />
-      <Header />
-      <Playlist />
-      <CardContainer />
-      <MainCardContainer playlistState={setPlaylistItem} />
-      <SideCardContainer playlistItem={playlistItem} />
-      
+         {/* <Playlist /> */}
       {/* <Navbar />
       <Header />
       <Playlist />
@@ -64,8 +72,3 @@ function App() {
       <div className="sidecards">
         {sideCards}
       </div> */}
-    </div>
-  )
-}
-
-export default App

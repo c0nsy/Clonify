@@ -19,14 +19,14 @@ function MainCardContainer(){
     }
     return(
         <div>
-            {mainCards}
-            {/* <div className="mainCardObject">
+            {/* {mainCards} */}
+            <div className="mainCardObject">
                 <div className="cardObj">
                     <img src={props.image} className ="mainCardImage"/>
                     <img src={props.playbutton} className="playbutton"/>
                     <img src={props.addbutton} onClick={() => handleAdd(props.id)} className="addbutton" />
                 </div>
-            </div> */}
+            </div>
         </div>
         
     )
