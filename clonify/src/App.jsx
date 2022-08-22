@@ -3,63 +3,69 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Header from './components/Header'
 import CardContainer from './components/CardContainer'
-// import SideCard from './components/SideCard'
-import Data from "./data"
-import MainCard from './components/MainCard'
-function App() {
-  const navbarIcons = Data.map(icon =>{
-    return(
-      <Navbar 
-        key={icon.id}
-        icon={icon.iconUrl}
-        title={icon.iconTitle}
-      />
-    )
-  })
-  const mainCards = Data.map(card => {
-    return(
-      <MainCard 
-          image={card.url}
-          key={card.id}
-          title={card.title}
-          playbutton={card.playbutton}
-          addbutton={card.addbutton}
-      />
-    )
-  })
-  const cloneify = Data.map(logo =>{
-    return(
-      <Header 
-        key={logo.id}
-        logo={logo.logoUrl}
-        title={logo.logoTitle}
-      />
-    )
-  })
-  
+import SideCard from './components/SideCard'
 
+import MainCard from './components/MainCard'
+import Playlist from './components/Playlist'
+
+
+
+// make state in parent component (app.jsx)
+// pass value into sibling a
+// pass setValue into sibling b
+
+
+function App() {
+  //playlist state
+  const [playlistItem, setPlaylistItem] = useState([])
+
+  // const mainCards = Data.map(card => {
+  //   return(
+  //     <MainCard 
+  //         key={card.id}
+  //         id={card.id}
+  //         image={card.url}
+  //         title={card.title}
+  //         playbutton={card.playbutton}
+  //         addbutton={card.addbutton}
+  //         //playlistState={setPlaylistItem}
+  //     />
+  //   )
+  // })
+  // const sideCards = SideData.map(card => {
+  //   return(
+  //     <SideCard 
+  //       image={card.sideurl}
+  //       key={card.id}
+  //       title={card.sidetitle}
+  //       playbutton={card.playbutton}
+  //       addbutton={card.addbutton}
+  //       playlistItem={playlistItem}
+  //     />
+  //   )
+  // })
+  
   return (
     <div className="App">
-      {navbarIcons}
-      {cloneify}
+      <Navbar />
+      <Header />
+      <Playlist />
+      <CardContainer />
+      <MainCardContainer playlistState={setPlaylistItem} />
+      <SideCardContainer playlistItem={playlistItem} />
       
+      {/* <Navbar />
+      <Header />
+      <Playlist />
       <CardContainer />
       <div className="maincards">
           {mainCards}
-      </div>
+      </div> 
+      <div className="sidecards">
+        {sideCards}
+      </div> */}
     </div>
   )
 }
 
 export default App
-/* <div className="everything">
-        <Navbar />
-        <Header />
-        <CardContainer />
-        <div className="maincards">
-          {mainCards}
-        </div>
-        <div className="sidecards">
-          <SideCard />
-        </div>
-      </div> */

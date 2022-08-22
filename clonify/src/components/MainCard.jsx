@@ -20,18 +20,21 @@ import React from "react"
 
 
 function MainCard(props){
+
+    const handleAdd = (id) => {
+        console.log(id)
+    }
     return(
-        <div className="mainCardObject">
-            <ul>
-                <li>
-                    <div className="cardObj">
-                        <img src={props.image} className ="mainCardImage"/>
-                        <img src={props.playbutton} className="playbutton"/>
-                        <img src={props.addbutton} className="addbutton" />
-                    </div>
-                </li>
-            </ul> 
+        <div>
+            <div className="mainCardObject">
+                <div className="cardObj">
+                    <img src={props.image} className ="mainCardImage"/>
+                    <img src={props.playbutton} className="playbutton"/>
+                    <img src={props.addbutton} onClick={() => handleAdd(props.id)} className="addbutton" />
+                </div>
+            </div>
         </div>
+        
     )
 }
 

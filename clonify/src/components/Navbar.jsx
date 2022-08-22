@@ -1,4 +1,7 @@
 import React from 'react'
+import HomeIcon from "/src/assets/navbarIcons/HomeIcon.png"
+import LibraryIcon from "/src/assets/navbarIcons/LibraryIcon.png"
+import SearchIcon from "/src/assets/navbarIcons/SearchIcon.png"
 
 /* 
     TO DO
@@ -14,11 +17,19 @@ import React from 'react'
 
 */
 
-function Navbar(props){
+function Navbar(){
     return(
         <div className='navbar'>
-            <img src={props.icon} />
-            <hr className="navbar-divider"></hr>
+            <div className="navbar--links">
+                <img src={HomeIcon} className="home--icon"/>
+                <h1>Home</h1>
+                <img src={SearchIcon} className="home--icon"/>
+                <h1>Search</h1>
+                <img src={LibraryIcon} className="home--icon"/>
+                <h1>Library</h1>
+                <hr className="navbar-divider"></hr>
+            </div>
+            
         </div>
     )
 }

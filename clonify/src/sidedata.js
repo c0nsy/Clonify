@@ -1,36 +1,4 @@
-const data=[
-    //MAIN CARDS
-    {
-        id:1,
-        url:"/Cards/hiphopMainCard.png",
-        playbutton:"/src/assets/playbutton.png",
-        addbutton:"/src/assets/addbutton.png",
-        description:"HipHopCard",
-        title:"Hip Hop",
-    },
-    {
-        id:2,
-        url:"/Cards/houseMainCard.png",
-        playbutton:"/src/assets/playbutton.png",
-        addbutton:"/src/assets/addbutton.png",
-        description:"House Card",
-        title:"House",
-    },
-    {
-        id:3,
-        url:"/Cards/popMainCard.png",
-        playbutton:"/src/assets/playbutton.png",
-        addbutton:"/src/assets/addbutton.png",
-        description:"Pop Card",
-        title:"Pop",
-    },
-    {
-        id:4,
-        sideurl:"/Cards/freshfindsSideCard.png",
-        playbutton:"/src/assets/playbutton.png",
-        addbutton:"/src/assets/addbutton.png",
-        sidetitle:"Fresh Finds",
-    },
+const sidedata=[
     // SIDE CARDS
     {
         id:5,
@@ -69,4 +37,4 @@ const data=[
     },
     
 ];
-export default data;
+export default sidedata;

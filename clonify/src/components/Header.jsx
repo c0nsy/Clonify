@@ -1,14 +1,13 @@
 import React from "react"
-function Header(props){
+import Logo from "/CloneifyLogos/CloneifyLogo.png"
+function Header(){
     return (
         <div>
             <div className="header">
-                <img src={props.logo} className="header--icon"/>
-                <h1>{props.title}</h1>
+                <img src={Logo} className="header--icon"/>
+                <h1>Cloneify</h1>
             </div>
-            
         </div>
-        
     )
 }
 
