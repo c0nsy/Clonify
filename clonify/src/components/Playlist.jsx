@@ -4,7 +4,7 @@ function Playlist(props){
     return(
         <div className="playlistContainer">
             <ul>
-                <li></li>
+                <li>{props.playlistItem}</li>
             </ul>
         </div>
     )   

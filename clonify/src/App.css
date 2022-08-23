@@ -67,9 +67,11 @@
     margin-top: 100px;
     width: 88%;
     height: 86.37%; /* Come back and use calc function to make more precise */
+    border-radius: 1px solid white;
 }
 /* MAIN CARDS */
-.maincards{
+
+/* .maincards{
     color:white;
     position: absolute;
     margin-left: 205px;
@@ -78,6 +80,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     height: 220px;
+    border-radius: 1px solid red;
 }
 
 .mainCardImage{
@@ -85,7 +88,8 @@
     max-height: 100%;
     margin-top: 10px;
     margin-left: 10px;
-}
+    border-radius: 1px solid red;
+} */
 
 /* SIDE CARDS */
 .sidecards{

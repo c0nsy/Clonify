@@ -1,5 +1,6 @@
-import React from "react"
+import React, {useState} from 'react'
 import Data from "../data"
+import MainCard from './MainCard'
 
 function MainCardContainer(){
     const mainCards = Data.map(card => {
@@ -14,19 +15,13 @@ function MainCardContainer(){
           />
         )
       })
-    const handleAdd = (title) => {
-        setPlaylistItem(title);
-    }
+
     return(
         <div>
-            {/* {mainCards} */}
             <div className="mainCardObject">
-                <div className="cardObj">
-                    <img src={props.image} className ="mainCardImage"/>
-                    <img src={props.playbutton} className="playbutton"/>
-                    <img src={props.addbutton} onClick={() => handleAdd(props.id)} className="addbutton" />
-                </div>
+                {mainCards}
             </div>
+            
         </div>
         
     )

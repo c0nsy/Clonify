@@ -1,12 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
 import Header from './components/Header'
 import CardContainer from './components/CardContainer'
 import MainCardContainer from './components/MainCardContainer'
-// import SideCardContainer from './components/SideCardContainer'
-// import SideCard from './components/SideCard'
-// import MainCard from './components/MainCard'
+import SideCardContainer from './components/SideCardContainer'
 import Playlist from './components/Playlist'
 
 
